@@ -1,0 +1,23 @@
+tutorial https://www.youtube.com/watch?v=82d9s8D6XE4
+
+
+source venv/bin/activate para ativar o ambiente 
+pip install wheel 
+pip install python-rpi.gpio python3-rpi.gpio
+ pip install RPi.GPIO   
+ pip install -U discord.py 
+
+
+
+
+
+
+ #MENU
+class Menu(discord.ui.View):
+    def _init_(self):
+        super().__init__()
+        self.value = None
+         
+    @discord.ui.button(label = "Send Message", style=discord.ButtonStyle.grey)
+    async def menu1(self, button: discord. ui. Button,interaction: discord.Interaction):
+        await interaction.response.send_message("Hello You Clicked Me")
